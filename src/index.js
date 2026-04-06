@@ -1,7 +1,9 @@
 const params = new URLSearchParams(document.location.search);
 const skinUrl = params.get('skin') || 'template_skin.png';
+const scale = parseFloat(params.get('scale')) || 10;
 
 document.body.style.setProperty('--background-image', `url(${skinUrl})`);
+document.body.style.setProperty('--scale', scale);
 
 document.querySelectorAll('.toggle-skin-parts label input').forEach(checkbox => {
   checkbox.addEventListener('change', e => {
