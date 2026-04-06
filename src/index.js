@@ -2,8 +2,8 @@ const params = new URLSearchParams(document.location.search);
 const skinUrl = params.get('skin') || 'template_skin.png';
 const scale = parseFloat(params.get('scale')) || 20;
 
-document.body.style.setProperty('--background-image', `url(${skinUrl})`);
-document.body.style.setProperty('--scale', scale);
+document.documentElement.style.setProperty('--background-image', `url(${skinUrl})`);
+document.documentElement.style.setProperty('--scale', scale);
 
 document.querySelectorAll('.toggle-skin-parts label input').forEach(checkbox => {
   checkbox.addEventListener('change', e => {
@@ -12,6 +12,17 @@ document.querySelectorAll('.toggle-skin-parts label input').forEach(checkbox => 
       el.style.display = e.target.checked ? '' : 'none';
     });
   });
+});
+
+document.addEventListener('wheel', e => {
+  const delta = Math.sign(e.deltaY);
+  
+  let scale = Math.fround(parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--scale')) || 20);
+  scale += delta * -1;
+  if (scale < 1) scale = 1;
+  if (scale > 100) scale = 100;
+  
+  document.documentElement.style.setProperty('--scale', scale);
 });
 
 let isDragging = false;
