@@ -5,15 +5,6 @@ const scale = parseFloat(params.get('scale')) || 20;
 document.documentElement.style.setProperty('--background-image', `url(${skinUrl})`);
 document.documentElement.style.setProperty('--scale', scale);
 
-document.querySelectorAll('.toggle-skin-parts label input').forEach(checkbox => {
-  checkbox.addEventListener('change', e => {
-    const part = e.target.name.split('-part')[0];
-    document.querySelectorAll(`.skin.${part}`).forEach(el => {
-      el.style.display = e.target.checked ? '' : 'none';
-    });
-  });
-});
-
 document.addEventListener('wheel', e => {
   const delta = Math.sign(e.deltaY);
   

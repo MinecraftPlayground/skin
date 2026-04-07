@@ -33,14 +33,6 @@ body {
   grid-template-rows: 1fr 100px;
 }
 
-.toggle-skin-parts {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-  user-select: none;
-}
-
 .skin-container {
   position: relative;
   display: grid;
