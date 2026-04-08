@@ -1,0 +1,140 @@
+.skin-part-origin.body {
+  transform:
+    translateY(calc(var(--scale) * 5px));
+
+  .skin-part {
+    transform:
+      translateX(calc(var(--scale) * -4px))
+      translateY(calc(var(--scale) * -12px))
+      translateZ(calc(var(--scale) * 2px));
+
+    .skin-part__plane {
+      &.up,
+      &.down  {
+        --width: 8;
+        --height: 4;
+
+        width: calc(var(--scale) * var(--width) * 1px);
+        height: calc(var(--scale) * var(--height) * 1px);
+
+        &::before {
+          scale:
+            calc((var(--width) + 2 * var(--layer-offset)) / var(--width))
+            calc((var(--height) + 2 * var(--layer-offset)) / var(--height));
+        }
+      }
+      &.front,
+      &.back {
+        --width: 8;
+        --height: 12;
+
+        width: calc(var(--scale) * var(--width) * 1px);
+        height: calc(var(--scale) * var(--height) * 1px);
+
+        &::before {
+          scale:
+            calc((var(--width) + 2 * var(--layer-offset)) / var(--width))
+            calc((var(--height) + 2 * var(--layer-offset)) / var(--height));
+        }
+      }
+      &.left,
+      &.right {
+        --width: 4;
+        --height: 12;
+
+        width: calc(var(--scale) * var(--width) * 1px);
+        height: calc(var(--scale) * var(--height) * 1px);
+
+        &::before {
+          scale:
+            calc((var(--width) + 2 * var(--layer-offset)) / var(--width))
+            calc((var(--height) + 2 * var(--layer-offset)) / var(--height));
+        }
+      }
+
+      &.up {
+        background-position:
+          calc(var(--scale) * -20px)
+          calc(var(--scale) * -16px);
+        transform:
+          rotateX(90deg)
+          translateY(calc(var(--scale) * -4px));
+
+        &::before {
+          background-position:
+            calc(var(--scale) * -20px)
+            calc(var(--scale) * -32px);
+        }
+      }
+      &.down {
+        background-position:
+          calc(var(--scale) * -28px)
+          calc(var(--scale) * -16px);
+        transform:
+          rotateX(90deg)
+          translateY(calc(var(--scale) * -4px))
+          translateZ(calc(var(--scale) * -12px));
+
+        &::before {
+          background-position:
+            calc(var(--scale) * -28px)
+            calc(var(--scale) * -32px);
+        }
+      }
+      &.front {
+        background-position:
+          calc(var(--scale) * -20px)
+          calc(var(--scale) * -20px);
+
+        &::before {
+          background-position:
+            calc(var(--scale) * -20px)
+            calc(var(--scale) * -36px);
+        }
+      }
+      &.back {
+        background-position:
+          calc(var(--scale) * -32px)
+          calc(var(--scale) * -20px);
+        transform:
+          rotateY(180deg)
+          translateX(calc(var(--scale) * -8px))
+          translateZ(calc(var(--scale) * 4px));
+
+        &::before {
+          background-position:
+            calc(var(--scale) * -32px)
+            calc(var(--scale) * -36px);
+        }
+      }
+      &.left {
+        background-position:
+          calc(var(--scale) * -28px)
+          calc(var(--scale) * -20px);
+        transform:
+          rotateY(90deg)
+          translateZ(calc(var(--scale) * 8px));
+
+        &::before {
+          background-position:
+            calc(var(--scale) * -28px)
+            calc(var(--scale) * -36px);
+        }
+      }
+      &.right {
+        background-position:
+          calc(var(--scale) * -16px)
+          calc(var(--scale) * -20px);
+        transform:
+          rotateY(-90deg)
+          translateX(calc(var(--scale) * -4px));
+
+        &::before {
+          background-position:
+            calc(var(--scale) * -40px)
+            calc(var(--scale) * -36px);
+        }
+      }
+    }
+  }
+}

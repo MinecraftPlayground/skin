@@ -1,6 +1,6 @@
 const params = new URLSearchParams(document.location.search);
-const skinUrl = params.get('skin') || 'template_skin.png';
-const scale = parseFloat(params.get('scale')) || 20;
+const skinUrl = params.get('skin') || 'default_skin.png';
+const scale = parseFloat(params.get('scale')) || 15;
 
 document.documentElement.style.setProperty('--background-image', `url(${skinUrl})`);
 document.documentElement.style.setProperty('--scale', scale);
