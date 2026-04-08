@@ -1,8 +1,8 @@
 .skin-part-origin.arm-left {
   transform:
     translateX(calc(var(--scale) * 4px))
-    translateY(calc(var(--scale) * -5px));
-    /* rotateX(-10deg); */
+    translateY(calc(var(--scale) * -5px))
+    rotateX(var(--skin-arm-left));
 
   .skin-part {
     transform:

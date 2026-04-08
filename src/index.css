@@ -20,6 +20,13 @@
   --pitch: 0deg;
   --yaw: 0deg;
   --background-image: url('./default_skin.png');
+
+  --skin-head-pitch: 0deg;
+  --skin-head-yaw: 0deg;
+  --skin-arm-left: 0deg;
+  --skin-arm-right: 0deg;
+  --skin-leg-left: 0deg;
+  --skin-leg-right: 0deg;
 }
 
 body {

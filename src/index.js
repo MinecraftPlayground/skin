@@ -28,12 +28,11 @@ document.addEventListener('mousedown', e => {
 
 document.addEventListener('mousemove', e => {
   if (!isDragging) return;
-  const dx = Math.fround((e.clientX - prevX) * 0.8);
-  const dy = Math.fround((e.clientY - prevY) * 0.8);
+  const dx = Math.round((e.clientX - prevX) * 8) / 10;
+  const dy = Math.round((e.clientY - prevY) * 8) / 10;
   
-  
-  let yaw = Math.fround(parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--yaw')) || 0);
-  let pitch = Math.fround(parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--pitch')) || 0);
+  let yaw = Math.round(parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--yaw')) || 0);
+  let pitch = Math.round(parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--pitch')) || 0);
   
   if (pitch > 90) pitch = 90;
   if (pitch < -90) pitch = -90;

@@ -2,9 +2,9 @@
   --layer-offset: 0.5;
 
   transform:
-    translateY(calc(var(--scale) * -7px));
-    /* rotateY(20deg) */
-    /* rotateX(10deg); */
+    translateY(calc(var(--scale) * -7px))
+    rotateY(var(--skin-head-yaw))
+    rotateX(var(--skin-head-pitch));
 
   .skin-part {
     transform:
