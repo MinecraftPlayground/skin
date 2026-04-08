@@ -1,4 +1,15 @@
+@keyframes leg-left-animation {
+  0% {
+    --skin-leg-left: 30deg;
+  }
+  100% {
+    --skin-leg-left: -30deg;
+  }
+}
+
 .skin-part-origin.leg-left {
+  animation:
+    leg-left-animation 1s infinite alternate ease-in-out;
   transform:
     translateX(calc(var(--scale) * 2px))
     translateY(calc(var(--scale) * 5px))

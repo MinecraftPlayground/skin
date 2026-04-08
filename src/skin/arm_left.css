@@ -1,4 +1,15 @@
+@keyframes arm-left-animation {
+  0% {
+    --skin-arm-left: -30deg;
+  }
+  100% {
+    --skin-arm-left: 30deg;
+  }
+}
+
 .skin-part-origin.arm-left {
+  animation:
+    arm-left-animation 1s infinite alternate ease-in-out;
   transform:
     translateX(calc(var(--scale) * 4px))
     translateY(calc(var(--scale) * -5px))

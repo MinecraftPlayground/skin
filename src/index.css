@@ -23,10 +23,30 @@
 
   --skin-head-pitch: 0deg;
   --skin-head-yaw: 0deg;
-  --skin-arm-left: 0deg;
-  --skin-arm-right: 0deg;
-  --skin-leg-left: 0deg;
-  --skin-leg-right: 0deg;
+}
+
+@property --skin-arm-left {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@property --skin-arm-right {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@property --skin-leg-left {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@property --skin-leg-right {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
 }
 
 body {
@@ -64,7 +84,6 @@ body {
       calc(var(--scale) * 64px);
     background-image: var(--background-image);
     background-repeat: no-repeat;
-    place-items: center;
 
     &::before {
       content: '';
