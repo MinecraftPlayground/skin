@@ -44,23 +44,17 @@ body {
 .skin-part__plane {
   transform-origin: top left;
   transform-style: preserve-3d;
-  color: black;
-}
-
-.skin {
-  display: grid;
-  place-items: center;
-  transform-origin: center;
-  transform:
-    rotateX(var(--pitch))
-    rotateY(var(--yaw));
   pointer-events: none;
   user-select: none;
 }
 
-.skin-part {
-  position: absolute;
+.skin {
+  transform:
+    rotateX(var(--pitch))
+    rotateY(var(--yaw));
+}
 
+.skin-part {
   .skin-part__plane {
     position: absolute;
     display: grid;
