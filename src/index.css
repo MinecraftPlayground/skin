@@ -20,9 +20,18 @@
   --pitch: 0deg;
   --yaw: 0deg;
   --background-image: url('./default_skin.png');
+}
 
-  --skin-head-pitch: 0deg;
-  --skin-head-yaw: 0deg;
+@property --skin-head-pitch {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@property --skin-head-yaw {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
 }
 
 @property --skin-arm-left {

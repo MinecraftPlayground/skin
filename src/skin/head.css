@@ -1,6 +1,29 @@
+@keyframes head-animation {
+  0% {
+    --skin-head-pitch: 0deg;
+    --skin-head-yaw: 0deg;
+  }
+  30% {
+    --skin-head-pitch: 10deg;
+    --skin-head-yaw: 30deg;
+  }
+  50% {
+    --skin-head-pitch: 10deg;
+  }
+  70% {
+    --skin-head-yaw: -30deg;
+  }
+  100% {
+    --skin-head-pitch: 0deg;
+    --skin-head-yaw: 0deg;
+  }
+}
+
 .skin-part-origin.head {
   --layer-offset: 0.5;
-
+  
+  animation:
+    head-animation 2.2s infinite ease-in-out;
   transform:
     translateY(calc(var(--scale) * -7px))
     rotateY(var(--skin-head-yaw))
